@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	@font-face{
+		font-family: 'awesome';
+		src: url('/fonts/fontawesome-webfont.ttf'),
+			 url('/fonts/fontawesome-webfont.eot'),
+			 url('/fonts/FontAwesome.otf');
+	}
+*{
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+*::selection {
+  background: #7E9BC2!important;
+}
+*::-moz-selection {
+  background: #7E9BC2!important;
+}
+	/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/*!
+ * froala_editor v1.2.6 (http://editor.froala.com)
+ * License http://editor.froala.com/license
+ * Copyright 2014-2015 Froala Labs
+ */
+ .froala-view{
+	background-color: #ABAAA6;
+}
+#page-container{
+	width: 100%;
+	background-image: none!important;
+	background-color: #ABAAA6!important;
+}
+#page-container>.pf:first-child{
+	margin-top: 48px!important;
+}
+#page-container>.pf{
+	border-radius: 2px!important;
+	box-shadow: 0px 1px 24px -3px #787878!important;
+}
+
+.froala-view>.notPdfConvertedStyles{
+	position: relative;
+	width: 604px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 48px;
+	padding-top: 60px;
+	padding-bottom: 48px;
+	border-radius: 2px;
+	min-height: 800px;
+	margin-top: 36px;
+	margin-bottom: 36px;
+	box-shadow: 0px 1px 24px -3px #787878;
+}
+
+.froala-view ul,.froala-view ol,ul.fr-tag,ol.fr-tag{padding-left:25px}.froala-view p,p.fr-tag{margin:0 0 10px;font-size:13px;}.froala-view h1,h1.fr-tag{font-size:36px;line-height:1.1;font-weight:400;margin-top:20px;margin-bottom:10px}.froala-view h2,h2.fr-tag{font-size:30px;line-height:1.1;font-weight:400;margin-top:20px;margin-bottom:10px}.froala-view h3,h3.fr-tag{font-size:24px;line-height:1.1;font-weight:400;margin-top:20px;margin-bottom:10px}.froala-view h4,h4.fr-tag{font-size:18px;line-height:1.1;font-weight:400;margin-top:10px;margin-bottom:10px}.froala-view h5,h5.fr-tag{font-size:14px;line-height:1.1;font-weight:400;margin-top:10px;margin-bottom:10px}.froala-view h6,h6.fr-tag{font-size:12px;line-height:1.1;font-weight:400;margin-top:10px;margin-bottom:10px}
+
+ /*!
+ * froala_editor v1.2.6 (http://editor.froala.com)
+ * License http://editor.froala.com/license
+ * Copyright 2014-2015 Froala Labs
+ */img.fr-fil{z-index:1;position:relative;margin:auto;overflow:auto;padding:10px 10px 10px 3px;float:left!important}img.fr-fil.fr-dib{float:none!important;margin-left:0!important}img.fr-fir{z-index:1;position:relative;margin:auto;overflow:auto;padding:10px 3px 10px 10px;float:right!important}img.fr-fir.fr-dib{float:none!important;margin-right:0!important}img.fr-fin{z-index:1;position:relative;margin:auto;overflow:auto;float:none}img.fr-fin.fr-dib{padding:10px 0}img.fr-dib{vertical-align:top;display:block}a.fr-file{position:relative}a.fr-file:before{position:relative;display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f0c6";top:0;padding-right:3px}.froala-view table,table.fr-tag{border-collapse:collapse;empty-cells:show;width:100%;margin-bottom:10px;margin-top:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.froala-view table td,table.fr-tag td{border:solid 1px #ccc;padding:5px}.froala-view table th,table.fr-tag th{background:#e6e6e6;border:solid 1px #ccc;padding:5px}.froala-view pre,pre.fr-tag{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;border:solid 1px #ccc;background:#fcfcfc;padding:10px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;font-family:"Courier New",Courier,monospace}.froala-view blockquote,blockquote.fr-tag{margin-left:20px;margin-right:0;margin-top:0;padding-left:20px;position:relative;font-style:italic;border-left:solid 5px #ccc}.froala-view hr,hr.fr-tag{height:0;border:0;border-top:solid 1px #ccc;clear:both}.fr-fvn{float:none;display:block!important;text-align:center!important}.fr-fvl{float:left;margin:10px 10px 10px 1px}.fr-fvr{float:right;margin:10px 1px 10px 10px}.fr-tnv{float:none!important;margin:auto;text-align:center;display:block!important}.fr-tnv.fr-fvl{text-align:left}.fr-tnv.fr-fvr{text-align:right}
+
+ </style>
+
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		var timer;
+		$(document).ready(function() {
+			var pgs = $('#page-container>.pf');
+
+			timer = setInterval(function() {
+				if($('#page-container>.pf')) {
+					if($('#page-container>.pf').length>0) {
+						pgs = $('#page-container>.pf');
+						initScrollThing();
+					}
+					else if($('.froala-view').attr('style')) {
+						clearInterval(timer);
+					};
+				};
+			}, 500);
+
+			function initScrollThing() {
+				clearInterval(timer);
+
+
+				if (pgs.length > 12) {
+					
+
+
+					$('#pf1>*, #pf2>*').show();
+					var scrlHeight = $('#page-container').height();
+					var pageCount = pgs.length;
+					var pageHeight = $('#pf1').height() + 26; // all pages have 13px margin on top and bottom and first page has 35px extra margin on top
+					var oldPage = 1;
+					$('#page-container').scroll(function() {
+						var pagesScrolled = (($(this).scrollTop()-35)/pageHeight) + 1; //since first page has 35 extra px margin on top, subtract that
+						if (pagesScrolled < 1) { //if scroll pos is at top of page one (in the area where the 35 extra px have been added), don't bother doing anything
+							return false;
+						};
+						var currentPage = Math.floor(pagesScrolled);
+						if (currentPage == oldPage) {
+							return false;
+						}
+						else{
+							oldPage = currentPage;
+							var vals = [String(currentPage-1), String(currentPage+1), String(currentPage-2), String(currentPage+2)];
+							$('#page-container>.pf:nth-child('+vals[0]+')>*, #page-container>.pf:nth-child('+currentPage+')>*, #page-container>.pf:nth-child('+vals[1]+')>*').show();
+							$('#page-container>.pf:nth-child('+vals[2]+')>*, #page-container>.pf:nth-child('+vals[3]+')>*').hide();
+						};
+					});
+				}
+				else{
+					$('.pf>*').show();
+				};
+			};
+		});
+	</script>
+</head>
+	<body class="froala-view">
+		<div class="notPdfConvertedStyles"></div>
+	</body>
+</html>

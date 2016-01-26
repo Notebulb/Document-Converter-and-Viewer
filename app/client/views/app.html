@@ -1,14 +1,53 @@
 <head>
-  <title>app</title>
+  <title>Document viewer</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to the document viewer demo!</h1>
 
-  {{> hello}}
+  {{> cont}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="cont">
+  {{#if fileIsUploaded}}
+  	{{#if fileIsReady}}
+		{{> documentViewer}}
+  	{{else}}
+  		<p>Converting your file...</p>
+  	{{/if}}
+  {{else}}
+  	{{> fileUploader}}
+  {{/if}}
+</template>
+
+<template name="fileUploader">
+	<div>
+		<p>
+			{{#if fileIsUploading}}
+				Uploading...
+			{{else}}
+				Select a document file to upload:
+			{{/if}}
+		</p>
+		<input class="{{fileIsUploading}}" type="file" name="fileUpload" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/rtf">
+	</div>
+</template>
+<template name="documentViewer">
+	<div id="documentViewer">
+		<h2>{{note.title}}</h2>
+		<p>Uploaded: {{noteUploadDate}}</p>
+		<div id="noteViewerCont">
+			<iframe src="/blank.html" id="noteContainer" fullscreen seamless></iframe>
+			<div id="noteController">
+				<div id="zoomLvls">
+					<a><img src="/imgs/zoomIcoPlus.png"></a>
+					<a><img src="/imgs/zoomIcoMinus.png"></a>
+				</div>
+				<div id="fullScreen">
+					<a><img src="/imgs/fullscreenIco.png"></a>
+				</div>
+			</div>
+			<div id="ppitest" style="width:1in;visible:hidden;padding:0px"></div>
+		</div>
+	</div>
 </template>
