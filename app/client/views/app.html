@@ -21,7 +21,7 @@
 </template>
 
 <template name="fileUploader">
-	<div>
+	<div id="fileUploader">
 		<p>
 			{{#if fileIsUploading}}
 				Uploading...
@@ -42,6 +42,11 @@
 				<div id="zoomLvls">
 					<a><img src="/imgs/zoomIcoPlus.png"></a>
 					<a><img src="/imgs/zoomIcoMinus.png"></a>
+				</div>
+				<div id="paging">
+					<a>▲</a>
+					<input type="text" name="pageNumber" value="1">
+					<a>▼</a>
 				</div>
 				<div id="fullScreen">
 					<a><img src="/imgs/fullscreenIco.png"></a>
