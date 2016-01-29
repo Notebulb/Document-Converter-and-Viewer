@@ -13,7 +13,9 @@
   	{{#if fileIsReady}}
 		{{> documentViewer}}
   	{{else}}
-  		<p>Converting your file...</p>
+  		<div>
+  			<p>Converting your file...</p>
+  		</div>
   	{{/if}}
   {{else}}
   	{{> fileUploader}}
