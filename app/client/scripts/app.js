@@ -129,20 +129,8 @@ if (Meteor.isClient) {
 
 		//prevent scrolling background body on complete scrolling of iframe
 			//--> must include https://github.com/jquery/jquery-mousewheel in your scripts
-		$('#noteContainer').on('mousewheel',function(event) {
-			var evt = event || window.event;
-			var $this = $(this);
-			var thisItemHeight = $this.outerHeight();
-			var maxScroll = $this[0].scrollHeight - thisItemHeight;
-			if ($this.scrollTop()>(maxScroll-1) && (evt.deltaY<0)) {
-				evt.preventDefault();
-				return false;
-			}
-			else if ($this.scrollTop()<1  && (evt.deltaY>0)) {
-				evt.preventDefault();
-				return false;
-			};
-		});
+			//--> must include https://github.com/sum-kcid/StopOverscroll in your scripts
+		$('#noteContainer').stopOverscroll();
 	};
 
 
