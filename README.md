@@ -10,6 +10,7 @@ This demo is made with [Meteor](https://www.meteor.com/)
 * [Meteor](https://www.meteor.com/)
 * [jquery](https://atmospherejs.com/meteor/jquery)
 * [jquery-mousewheel](https://github.com/jquery/jquery-mousewheel)
+* [StopOverscroll](https://github.com/sum-kcid/StopOverscroll)
 * [momentjs](https://atmospherejs.com/momentjs/moment)
 * [Open Sans font](https://www.google.com/fonts/specimen/Open+Sans) - you can use what you like tho
 * [Font Awesome](fortawesome.github.io/Font-Awesome/)
